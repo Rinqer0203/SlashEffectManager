@@ -5,13 +5,13 @@ using System;
 
 public class SlashEffectController : MonoBehaviour
 {
-	[SerializeField] private ParticleSystem particle = null;
+	[SerializeField] private ParticleSystem _particle = null;
 	private SlashEffectManager.SlashEffectPool _callback;
 
     public void Play(SlashEffectManager.SlashEffectPool callback)
 	{
 		_callback = callback;
-		particle.Play();
+		_particle.Play();
 	}
 
 	public void OnParticleSystemStopped()

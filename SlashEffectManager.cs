@@ -69,17 +69,6 @@ public class SlashEffectManager : MonoBehaviour
                 _slashEffects[i].pool.PreloadAsync(_preLoadNum, _preLoadNum).Subscribe();
             }
         }
-        StartCoroutine(test());
-    }
-
-    private IEnumerator test()
-    {
-        var _wait = new WaitForSeconds(0.2f);
-        while (true)
-        {
-            CreateSlashEffect(PlayerCtrl.PlayerPos, Vector2.zero);
-            yield return _wait;
-        }
     }
 
     public void CreateSlashEffect(Vector2 attackerPos, Vector2 takePos)
